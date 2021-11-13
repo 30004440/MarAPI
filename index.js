@@ -19,8 +19,8 @@ const newspapers = [
     },
     {
         name: 'diariodenoticias',
-        address: 'https://pt.euronews.com/tag/mar',
-        base: 'https://pt.euronews.com'
+        address: 'https://www.dn.pt/tag/mar.html',
+        base: 'https://www.dn.pt'
     }
 ]
 
@@ -70,7 +70,7 @@ app.get('/news/:newspaperId', (req, res) => {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
-                    title,
+                    tittle,
                     url: newspaperBase + url,
                     source: newspaperId
                 })
